@@ -3,6 +3,7 @@
 AT CONTINUOUS INTEGRATION
 
 [![Build Status](https://travis-ci.com/hafey1/nodeBackEnd.svg?branch=main)](https://travis-ci.com/hafey1/nodeBackEnd)
+[![Coverage Status](https://coveralls.io/repos/github/hafey1/nodeBackEnd/badge.svg?branch=main)](https://coveralls.io/github/hafey1/nodeBackEnd?branch=main)
 
 ## Scripts
 Build and spin up server. Prestart script is automatically ran before.
