@@ -6,6 +6,7 @@ AT CONTINUOUS INTEGRATION
 [![Coverage Status](https://coveralls.io/repos/github/hafey1/nodeBackEnd/badge.svg?branch=main)](https://coveralls.io/github/hafey1/nodeBackEnd?branch=main)
 [![Maintainability](https://api.codeclimate.com/v1/badges/64b2ba3ff1fc556b083b/maintainability)](https://codeclimate.com/github/hafey1/nodeBackEnd/maintainability)
 [![Test Coverage](https://api.codeclimate.com/v1/badges/64b2ba3ff1fc556b083b/test_coverage)](https://codeclimate.com/github/hafey1/nodeBackEnd/test_coverage)
+[![Build status](https://ci.appveyor.com/api/projects/status/n5e8vaja3j051dg4?svg=true)](https://ci.appveyor.com/project/hafey1/nodebackend)
 
 ## Scripts
 Build and spin up server. Prestart script is automatically ran before.

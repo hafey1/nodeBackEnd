@@ -1,0 +1,9 @@
+environment:
+  TEST_ENV_VARIABLE: "Environment variable is coming across."
+  matrix:
+  - nodejs_version: "12"
+install:
+  - yarn
+test_script:
+  - yarn test
+build: off
