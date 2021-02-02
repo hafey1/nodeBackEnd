@@ -2,6 +2,8 @@
 
 AT CONTINUOUS INTEGRATION
 
+[![Build Status](https://travis-ci.com/hafey1/nodeBackEnd.svg?branch=main)](https://travis-ci.com/hafey1/nodeBackEnd)
+
 ## Scripts
 Build and spin up server. Prestart script is automatically ran before.
 ```
