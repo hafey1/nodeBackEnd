@@ -1,6 +1,5 @@
 language: node_js
 env:
- - TEST_ENV_VARIABLE="Environment variable is coming across."
  global:
  - CC_TEST_REPORTER_ID=76e8606e8139d68e9ee3f0c9c12809a68ed86d618bd0599782e13ab19f72a074
 matrix:
