@@ -1,6 +1,5 @@
 # Back-End
 
-AT CONTINUOUS INTEGRATION
 
 [![Build Status](https://travis-ci.com/hafey1/nodeBackEnd.svg?branch=main)](https://travis-ci.com/hafey1/nodeBackEnd)
 [![Coverage Status](https://coveralls.io/repos/github/hafey1/nodeBackEnd/badge.svg?branch=main)](https://coveralls.io/github/hafey1/nodeBackEnd?branch=main)
@@ -13,7 +12,7 @@ AT CONTINUOUS INTEGRATION
 [travis-ci](https://travis-ci.com/) is used for the base CI tool.
 [coveralls](https://coveralls.io/) is used for tracking code coverage.
 [AppVeyor](https://ci.appveyor.com/) is used for Windows versioning of CI.
-[codeclimate](https://api.codeclimate.com/)
+[codeclimate](https://api.codeclimate.com/) is used for code review.
 
 ## Scripts
 Build and spin up server. Prestart script is automatically ran before.
