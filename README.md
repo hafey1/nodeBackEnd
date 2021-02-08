@@ -4,7 +4,6 @@
 [![Build Status](https://travis-ci.com/hafey1/nodeBackEnd.svg?branch=main)](https://travis-ci.com/hafey1/nodeBackEnd)
 [![Coverage Status](https://coveralls.io/repos/github/hafey1/nodeBackEnd/badge.svg?branch=main)](https://coveralls.io/github/hafey1/nodeBackEnd?branch=main)
 [![Maintainability](https://api.codeclimate.com/v1/badges/64b2ba3ff1fc556b083b/maintainability)](https://codeclimate.com/github/hafey1/nodeBackEnd/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/64b2ba3ff1fc556b083b/test_coverage)](https://codeclimate.com/github/hafey1/nodeBackEnd/test_coverage)
 [![Build status](https://ci.appveyor.com/api/projects/status/n5e8vaja3j051dg4?svg=true)](https://ci.appveyor.com/project/hafey1/nodebackend)
 
 ## Continuous Integration Tools
@@ -31,3 +30,6 @@ Testing
 ```
     yarn test
 ```
+
+## How to Plug n Play
+This is a template nodeJS/postgreSQL backend. Please see **./src/controllers**, **./src/models**, and **./src/utils** for generalized examples of endpoint creation and interfacing between nodeJS and postgreSQL.
