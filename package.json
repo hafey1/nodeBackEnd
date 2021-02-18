@@ -11,16 +11,20 @@
     "postpretty": "yarn lint --fix",
     "test": "nyc --reporter=html --reporter=text --reporter=lcov mocha -r @babel/register",
     "coverage": "nyc report --reporter=text-lcov | coveralls",
-    "runQuery": "babel-node ./src/utils/runQuery"
+    "runQuery": "babel-node ./src/utils/runQuery",
+    "runSample": "babel-node ./src/twitterFetch/twitterSample",
+    "runFilter": "babel-node ./src/twitterFetch/twitterFilter"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
+    "debug": "^2.6.9",
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
     "morgan": "~1.9.1",
+    "needle": "^2.6.0",
+    "node-pg-migrate": "^5.9.0",
     "pg": "^8.5.1",
-    "debug": "^2.6.9",
     "prettier-eslint": "^12.0.0"
   },
   "devDependencies": {

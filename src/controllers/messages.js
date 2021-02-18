@@ -12,9 +12,9 @@ export const messagesPage = async (req, res) => {
 };
 
 export const addMessage = async (req, res) => {
-  const { name, message } = req.body;
-  const columns = 'name, message';
-  const values = `'${name}', '${message}'`;
+  const { name, message, id } = req.body;
+  const columns = 'name, message, id';
+  const values = `'${name}', '${message}', '${id}' `;
   try {
     const data = await messagesModel.insertWithReturn(columns, values);
     res.status(200).json({ messages: data.rows });
