@@ -1,9 +1,12 @@
 import { bearerToken } from '../settings';
+import { insertMessageWithName } from '../utils/queries';
+import { executeQueryArray } from '../utils/queryFunctions';
 
 const needle = require('needle');
 
 const ruleURL = 'https://api.twitter.com/2/tweets/search/stream/rules';
-const filteredStreamURL = 'https://api.twitter.com/2/tweets/search/stream';
+const filteredStreamURL =
+  'https://api.twitter.com/2/tweets/search/stream?expansions=author_id';
 
 // rule structure for filterstream
 const rules = [
@@ -72,6 +75,8 @@ async function setRules() {
 }
 
 function streamConnect() {
+  let entries = [];
+  let timeoutCounter = 0;
   const stream = needle.get(filteredStreamURL, {
     headers: {
       'User-Agent': 'v2FilterStreamJS',
@@ -84,10 +89,22 @@ function streamConnect() {
     .on('data', (data) => {
       try {
         const json = JSON.parse(data);
-        console.log(json);
+        console.log(json.data?.text);
+        console.log(json.includes?.users?.[0].username);
+        entries.push({
+          username: json.includes?.users?.[0].username,
+          message: json.data?.text,
+        });
       } catch (e) {
-        //do nothing
-        console.log(e);
+        timeoutCounter++;
+        if (timeoutCounter > 1) {
+          console.log('we are done now, need to stay under cap');
+          process.exit();
+        }
+        // do nothing to keep stream open
+        executeQueryArray([insertMessageWithName(entries)]);
+        entries = [];
+        console.log('eeee keeping stream open');
       }
     })
     .on('error', (error) => {
