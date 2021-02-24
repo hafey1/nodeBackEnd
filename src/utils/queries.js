@@ -1,3 +1,4 @@
+//examples of raw SQL
 export const createMessageTable = `
 DROP TABLE IF EXISTS messages;
 CREATE TABLE IF NOT EXISTS messages (
@@ -23,7 +24,16 @@ export const insertMessageWithName = (batchMessageEntry) => {
         .replaceAll('\n\n', ' ')}'),`;
     })
     .join('\n')}`.replace(/,\s*$/, '\n');
-  console.log(messageBatch);
+
   return messageBatch;
 };
 export const dropMessagesTable = 'DROP TABLE messages';
+
+export const createTable = (tableName, tableAttributesAndTypes) => {
+  return `CREATE TABLE IF NOT EXISTS ${tableName} (
+${tableAttributesAndTypes
+  .map((ele) => {
+    return `    ${ele.attribute} ${ele.type} ${ele.constraints},`;
+  })
+  .join('\n')}`.replace(/,\s*$/, '\n)');
+};

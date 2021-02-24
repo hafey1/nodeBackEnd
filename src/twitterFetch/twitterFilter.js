@@ -1,5 +1,5 @@
 import { bearerToken } from '../settings';
-import { insertMessageWithName } from '../utils/queries';
+import { createTable, insertMessageWithName } from '../utils/queries';
 import { executeQueryArray } from '../utils/queryFunctions';
 
 const needle = require('needle');
@@ -89,8 +89,6 @@ function streamConnect() {
     .on('data', (data) => {
       try {
         const json = JSON.parse(data);
-        console.log(json.data?.text);
-        console.log(json.includes?.users?.[0].username);
         entries.push({
           username: json.includes?.users?.[0].username,
           message: json.data?.text,
@@ -118,6 +116,20 @@ function streamConnect() {
 
 (async () => {
   let current;
+  console.log(
+    createTable('dream', [
+      {
+        attribute: 'joke',
+        type: 'TEXT',
+        constraints: 'NOT NULL',
+      },
+      {
+        attribute: 'id',
+        type: 'SERIAL',
+        constraints: 'PRIMARY KEY',
+      },
+    ])
+  );
   try {
     // gets all rules currently applied
     current = await getAllRules();

@@ -13,7 +13,9 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls",
     "runQuery": "babel-node ./src/utils/runQuery",
     "runSample": "babel-node ./src/twitterFetch/twitterSample",
-    "runFilter": "babel-node ./src/twitterFetch/twitterFilter"
+    "runFilter": "babel-node ./src/twitterFetch/twitterFilter",
+    "createMigration": "babel-node ./src/utils/schemaMigration",
+    "runMigration": "bash runMigrate.sh"
   },
   "dependencies": {
     "cookie-parser": "~1.4.4",
@@ -21,6 +23,7 @@
     "dotenv": "^8.2.0",
     "express": "~4.16.1",
     "http-errors": "~1.6.3",
+    "moment": "^2.29.1",
     "morgan": "~1.9.1",
     "needle": "^2.6.0",
     "node-pg-migrate": "^5.9.0",

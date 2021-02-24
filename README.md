@@ -33,3 +33,16 @@ Testing
 
 ## How to Plug n Play
 This is a template nodeJS/postgreSQL backend. Please see **./src/controllers**, **./src/models**, and **./src/utils** for generalized examples of endpoint creation and interfacing between nodeJS and postgreSQL.
+
+## Migrations
+
+```
+    yarn createMigration
+```
+To create migrations
+WIP: calling create migrations without hardcoded input
+
+```
+    yarn runMigration
+```
+    To run migrations
