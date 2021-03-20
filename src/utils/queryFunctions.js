@@ -3,6 +3,7 @@ import {
   insertMessages,
   dropMessagesTable,
   createMessageTable,
+  createTable,
 } from './queries';
 
 export const executeQueryArray = async (arr) => {
@@ -15,9 +16,9 @@ export const executeQueryArray = async (arr) => {
       });
     });
   } catch (e) {
-    console.log(e);
+    console.error(e);
   }
 };
 export const dropTables = () => executeQueryArray([dropMessagesTable]);
-export const createTables = () => executeQueryArray([createMessageTable]);
+export const createTables = () => executeQueryArray([createTable()]);
 export const insertIntoTables = () => executeQueryArray([insertMessages]);

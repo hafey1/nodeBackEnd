@@ -7,4 +7,6 @@ indexRouter.get('/', indexPage);
 
 indexRouter.get('/messages', messagesPage);
 indexRouter.post('/messages', modifyMessage, addMessage);
+
+indexRouter.post('/rules');
 export default indexRouter;
